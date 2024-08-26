@@ -1,0 +1,204 @@
+:root {
+  --colorText: #FFFFFF;
+  --colorTextBlack: #272727;
+  --fontMain: "Gilroy", sans-serif;
+  --colorGrey:rgba(243, 243, 243, 1);
+	// --colorMain: #46ECD6;
+	// --colorAccent: #B7D433;
+	// --colorAccent2: #A4FFA7;
+	// --colorAccent3: #918EE1;
+	--colorBgGradient:linear-gradient(309.67deg, #272727 4.85%, #2389AA 65.25%, #000000 107.81%);
+	// --colorBg: #101425;
+	// --colorTextMuted: rgba(11, 14, 27, 0.57);
+	// --colorTextMutedHard: rgba(11, 14, 27, 0.2);
+	// --colorGrayLight: #DADADA;
+	// --colorGrayLight2: #F8F8F8;
+	// --colorGrayLight3: #f4f4f4;
+	// --colorBorder: #F4F4F6;
+	// --tileRadius: 2.222rem;
+	--fontPageTitle: "Helvetica", sans-serif;
+	// --fontSecondary: "Despair Display", sans-serif;
+	--transitionDuration: .3s;
+	--wrapperSpace: 3.125%;
+	// --wrapperSpaceTide: 7.45vw;
+  --fancybox-bg:rgba(29, 29, 29, 0.55);
+}
+$z-default: 1;
+$z-dropdown: 100;
+$z-sticky: 200;
+$z-overlay: 300;
+$z-modal: 400;
+$z-window: 500;
+@mixin tab {
+	@media screen and (max-width: 1100px) {
+		@content
+	}
+}
+@mixin mob {
+	@media screen and (max-width: 767px) {
+		@content
+	}
+}
+@mixin spacingNull {
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+@mixin overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+@mixin input {
+	height: 2.75rem;
+	background: transparent;
+	border-radius: 0;
+	border: none;
+	border-bottom: 1px solid var(--colorGrayLight);
+	box-shadow: 0 1px 0 transparent;
+	padding: 0;
+	font-size: 1rem;
+	font-family: var(--font400);
+	color: var(--colorText);
+	outline: none;
+	transition-duration: var(--transitionDuration);
+	transition-property: border-color, box-shadow, font-size, color;
+	&::placeholder {
+		color: var(--colorTextMuted);
+		transition-duration: var(--transitionDuration);
+		transition-property: color;
+	}
+	&:focus {
+		border-color: var(--colorText);
+		box-shadow: 0 1px 0 var(--colorText);
+		&::placeholder {
+			color: rgba(#252525, .15);
+		}
+	}
+	.white-fields & {
+		border-color: rgba(#fff, .3);
+		color: #fff;
+		&:focus {
+			border-color: #fff;
+			box-shadow: 0 1px 0 0 #fff;
+		}
+		&::placeholder {
+			color: #fff;
+		}
+	}
+}
+.anim-fade-up {
+	transform: translateY(20%);
+	opacity: 0;
+	transition-duration: .3s;
+	transition-property: transform, opacity;
+	transition-delay: .2s;
+	&.animated {
+		transform: translateY(0);
+		opacity: 1;
+	}
+	@include mob {
+		transition-delay: .1s;
+	}
+}
+.anim-fade-up--dx2 {
+	transform: translateY(5%);
+}
+.anim-fade-up--x2 {
+	transform: translateY(40%);
+}
+.anim-delay-1 {
+	transition-delay: .3s;
+	@include mob {
+		transition-delay: .2s;
+	}
+}
+.anim-delay-2 {
+	transition-delay: .4s;
+	@include mob {
+		transition-delay: .3s;
+	}
+}
+.anim-delay-3 {
+	transition-delay: .5s;
+	@include mob {
+		transition-delay: .4s;
+	}
+}
+.anim-delay-4 {
+	transition-delay: .6s;
+	@include mob {
+		transition-delay: .5s;
+	}
+}
+.anim-delay-5 {
+	transition-delay: .7s;
+	@include mob {
+		transition-delay: .6s;
+	}
+}
+.anim-delay-6 {
+	transition-delay: .8s;
+	@include mob {
+		transition-delay: .7s;
+	}
+}
+.anim-delay-7 {
+	transition-delay: .9s;
+	@include mob {
+		transition-delay: .8s;
+	}
+}
+.anim-delay-8 {
+	transition-delay: 1s;
+	@include mob {
+		transition-delay: .9s;
+	}
+}
+.anim-delay-9 {
+	transition-delay: 1.1s;
+	@include mob {
+		transition-delay: 1s;
+	}
+}
+@keyframes vFloat {
+	0%{
+		transform:translateY(-10%)
+	}
+	50%{
+		transform:translateY(10%)
+	}
+	100% {
+		transform:translateY(-10%)
+	}
+}
+@keyframes spin {
+	100% {
+		transform:rotate(360deg);
+	}
+}
+@keyframes FloatTopRight {
+	100% {
+		transform: translate(12%, -12%);
+	}
+}
+@keyframes FloatBottomLeft {
+	100% {
+		transform: translate(-12%, 12%);
+	}
+}
+@keyframes FloatScaleGlare {
+	100% {
+		transform: translate(200%, -200%) scale(3);
+	}
+}
+@keyframes FloatScaleGlareMob {
+	100% {
+		transform: translate(100%, -100%) scale(3);
+	}
+}

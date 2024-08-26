@@ -1,0 +1,12 @@
+block variablesVer
+	-var ver = 20
+block variables
+doctype html
+html(lang="ru")
+	include head.pug
+	//- include ../includes/mixins.pug
+	body(class=BodyClass)
+		include header
+		block content
+		include footer
+		include foot

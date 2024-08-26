@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Light.woff2') format('woff2'), url('../fonts/Gilroy-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Gilroy';
+	src: url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/Helvetica_bold.woff') format('woff'), url('../fonts/Helvetica_bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Helvetica';
+	src: url('../fonts/Helvetica_regular.woff') format('woff'), url('../fonts/Helvetica_regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'NT Somic';
+	src: url('../fonts/NTSomic-Regular.woff') format('woff'), url('../fonts/NTSomic-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'Rubic';
+	src: url('../fonts/Rubic-Regular.woff') format('woff'), url('../fonts/Rubic-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
